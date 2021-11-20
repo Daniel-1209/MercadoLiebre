@@ -1,0 +1,176 @@
+
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+header{
+    font-family: 'Roboto';
+    font-size: 12px;
+    padding: 20px;
+    background-color: #EAC926;
+    /* Esto es para que se defina el ancho total o alto para que ya no se aumente nada
+    lo unico que si se suma es el margen por que ese ya esta afuera del borde de la caja*/
+    box-sizing: border-box;
+    /*Posicion fija*/
+    position: fixed;
+    top: 0;
+   
+
+}
+
+.logo{
+    width: 50%;
+    /* animation: nombre duracion Nivel-de-aceleracion repeticion direccion*/
+    animation: aumentar 1s linear infinite alternate;
+}
+
+@keyframes aumentar {
+    0% {
+        transform: scale(1);
+    }
+
+    100%{
+        transform: scale(1.5);
+    }
+}
+
+
+.search{
+    width: 50%;
+    height: 40px;
+    background: white;
+    border: 1px solid black;
+}
+
+#searchs{
+    height: 100%;
+    width: 88%;
+    margin: 0px;
+}
+
+.fa-search{
+    height: 100%;
+    width: 9%;
+    padding: 0px;
+    margin: 0px;
+    text-align: center;
+}
+
+.title-header{
+    margin-top: 20px;
+    font-weight: 400;
+    text-align: center;
+    /* Esto hace crecer el contenedor y abarcar un 100%*/
+    flex-grow: 1;    
+}
+
+.header-bar{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+
+
+nav ul{
+    display:none;
+}
+
+ul {
+    text-decoration: none;
+}
+
+h3{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+
+
+.menu-hamburguesa {
+    background-color: blue;
+    font-size: 18px;
+    color: white;
+    display: block;
+    padding: 15px;
+    width: 50px;
+    border-radius: 20%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+}
+footer{
+    background-color: white;
+}
+
+footer section{
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+footer i {
+    font-size: 2em;
+    margin-bottom: 10px;
+    color: #1259c3;
+}
+
+
+.formato{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #adadad;
+    width: 100vw;
+    margin-top: 240px;
+    
+    
+}
+
+.formulario{
+    
+    width: 90vw;
+    display: block;
+    margin: 20px;
+    justify-content: center;
+    
+    flex-wrap: wrap;
+}
+
+label{
+    display: block;
+    padding-bottom: 10px;
+    font-size: 30px;
+}
+
+input{
+    border-radius: 10px;
+    height: 30px;
+    width:  100%;
+}
+
+.radioButton{
+    display: inline-block;
+    width: 30%;
+}
+
+.botones{
+    width: 90vw;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+
+}
+
+button{
+    width: 100px;
+    height: 40px;
+    background-color: #2cc8dd;
+    border-radius: 20px;
+    font-size: 20px;
+}

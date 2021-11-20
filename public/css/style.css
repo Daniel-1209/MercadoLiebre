@@ -1,0 +1,428 @@
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+
+header{
+    font-family: 'Roboto';
+    font-size: 12px;
+    padding: 20px;
+    background-color: #EAC926;
+    /* Esto es para que se defina el ancho total o alto para que ya no se aumente nada
+    lo unico que si se suma es el margen por que ese ya esta afuera del borde de la caja*/
+    box-sizing: border-box;
+   
+
+}
+
+.logo{
+    width: 50%;
+}
+
+.search{
+    width: 50%;
+    height: 40px;
+    background: white;
+    border: 1px solid black;
+}
+
+#searchs{
+    height: 100%;
+    width: 88%;
+    margin: 0px;
+}
+
+.fa-search{
+    height: 100%;
+    width: 9%;
+    padding: 0px;
+    margin: 0px;
+    text-align: center;
+}
+
+.title-header{
+    margin-top: 20px;
+    font-weight: 400;
+    text-align: center;
+    /* Esto hace crecer el contenedor y abarcar un 100%*/
+    flex-grow: 1;    
+}
+
+.header-bar{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+main{
+    padding: 20px;
+    width: 100vw;
+    background-color: rgb(206, 206, 206);
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
+main section article strong {
+    opacity: 0;
+    transition: all 0.5s;
+}
+
+
+main section article:hover strong {
+    opacity: 1;
+}
+
+main section article i {
+    display: block;
+    font-size: 16px;
+    padding:  5px;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #39b54a;
+    background-color: #FFF;
+    border-radius: 50%;
+    position: absolute;
+    right: 20px;
+    margin-top: -20px;
+    transition: transform 0.5s;
+}
+
+main section article i:hover {
+    transform: rotate(-90deg);
+}
+
+
+article {
+    margin-bottom: 20px;
+    width: 80%;
+    padding: 20px;
+    background-color: white;
+    /* Con esto la posision absolute la obdece como una pared*/
+    position: relative;
+    transition: all 0.5s;
+    
+}
+
+main section article:hover {
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+}
+
+article img {
+    width: 200px;
+}
+
+#ultimaVista {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+#Ofertas {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+
+
+#cuotas{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.detalles{
+    border-top: solid 1px #ebebeb;
+    padding: 15px;
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+nav ul{
+    display:none;
+}
+
+ul {
+    text-decoration: none;
+}
+
+h3{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.precios {
+    font-family:  18px;
+    width: 30%;
+}
+
+.descuento {
+    font-size: 16px;
+    color: green;
+    width: 70%;
+}
+
+article div i {
+    color: green;
+}
+
+
+.menu-hamburguesa {
+    background-color: blue;
+    font-size: 18px;
+    color: white;
+    display: block;
+    padding: 15px;
+    width: 50px;
+    border-radius: 20%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+}
+footer{
+    background-color: white;
+    padding: 20px;
+}
+
+footer section{
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+footer i {
+    font-size: 2em;
+    margin-bottom: 10px;
+    color: #1259c3;
+}
+
+
+
+
+
+/*     Navegacion de Tablet     */
+
+@media (min-width: 768px) {
+
+    .header-bar{
+        flex-wrap: nowrap;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 30px;
+        align-items: center;
+    }
+    .title-header{
+        max-width:  none;
+        text-align: right;
+    }
+
+    .logo {
+        width: 300px;
+    }
+
+    .search{
+        width: 30%;
+        height: 40px;
+        background: white;
+        
+    }
+
+    nav{
+        margin-bottom: 10px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    nav ul{
+        display:flex;
+        list-style: none;
+        padding: 0px;
+        margin: 0px;
+    }
+
+    nav li {
+        margin: 0 5px;
+    }
+
+    nav a{
+        text-decoration: none;
+        color: #222222;
+        display: inline-block;
+        padding: 5px 0;
+        font-size: 17px;
+    }
+
+    article {
+        margin-bottom: 10px;
+        
+    }
+
+    
+
+    strong {
+        font-size: 16px;
+        display: inline;
+    }
+
+    .menu-hamburguesa {
+        display: none;
+    }
+
+    #ultimaVista {
+        /**/
+        display: flex;
+        /* Esto hace que no se ponga todo en una sola line del mismo tamaño */
+        flex-wrap: wrap;
+        /* Esto hace que la direccion sea un una fila*/
+        flex-direction: row;
+        /* justa el contenido al centro en forma de fila*/
+        justify-content: center;
+        /* justa el contendio al centro en forma de columa*/
+        align-items: center;
+        
+        
+    }
+
+    article {
+        margin: 20px;
+        width: 40%;
+
+    }
+    main section h3{
+        width: 100%;
+    }
+
+    #Ofertas{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        
+    }
+
+}
+
+
+
+
+
+/*     Navegacion de Computadoras     */
+
+
+@media (min-width: 1200px){
+
+
+    .header-bar, nav {
+        max-width: 1200px;
+        margin: auto;
+    }
+
+    nav li {
+        margin: 0 10px;
+    }
+
+    nav a {
+        font-size: 19px;
+    }
+
+    .title-header{
+
+        font-size: 22px;
+        max-width: none;
+        font-weight: 400;
+
+    }
+
+    .logo{
+        width: 300px;
+    }
+
+    .header-bar{
+        margin-bottom: 40px;
+        align-items: center;
+    }
+
+    article {
+        margin: 20px;
+        width: 20%;
+
+    }
+
+    footer .pie {
+        padding: 10px;
+        width: 25%;
+    }
+    footer .copy{
+        
+        padding-top: 20px ;
+        width: 50%;
+    }
+    
+
+    footer{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    footer .pie .fas:hover{
+        color: yellow;
+    }
+    
+
+
+
+}
+
+
+
+
+/*++++++++++++++++++ LOGIN ++++++++++++++++*/
+
+.login {
+    background-color: rgb(194, 194, 194);
+    padding: 30px;
+
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    flex-direction: column;
+}
+
+.login input  {
+    width: 100%;
+    height: 40px;
+    border-radius: 10px;
+    border: none;
+    font-weight: bold;
+    font-size: 15px;
+    padding-left: 5px;
+}
+
+.form{
+    width: 50%;
+    padding-bottom: 30px;
+}
+
+.login button{
+    width: 50%;
+    height: 40px;
+    border-radius: 10px;
+    border: none;
+    background-color: blue;
+    font-weight: bold;
+    font-size: 15px;
+    color: white;
+}
+
+.login button:hover{
+    background-color: #0022AA;
+}
