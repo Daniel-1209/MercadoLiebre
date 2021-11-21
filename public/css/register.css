@@ -6,6 +6,7 @@
 }
 
 header{
+    height: 300px;
     font-family: 'Roboto';
     font-size: 12px;
     padding: 20px;
@@ -16,23 +17,32 @@ header{
     /*Posicion fija*/
     position: fixed;
     top: 0;
+    display: block;
+    box-sizing: border-box;
    
 
+}
+
+header img {
+    display: block;
+    width: 70%;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 .logo{
     width: 50%;
     /* animation: nombre duracion Nivel-de-aceleracion repeticion direccion*/
-    animation: aumentar 1s linear infinite alternate;
+    animation: aumentar 2s linear infinite alternate;
 }
 
 @keyframes aumentar {
     0% {
-        transform: scale(1);
+        transform: scale(0.8);
     }
 
     100%{
-        transform: scale(1.5);
+        transform: scale(1);
     }
 }
 
@@ -98,6 +108,7 @@ h3{
     display: block;
     padding: 15px;
     width: 50px;
+    height: 50px;
     border-radius: 20%;
     text-align: center;
     margin-left: auto;
@@ -122,11 +133,12 @@ footer i {
 
 
 .formato{
+    
     display: flex;
     flex-wrap: wrap;
     background-color: #adadad;
     width: 100vw;
-    margin-top: 240px;
+    padding-top: 300px;
     
     
 }
@@ -173,4 +185,27 @@ button{
     background-color: #2cc8dd;
     border-radius: 20px;
     font-size: 20px;
+}
+
+@media (min-width: 460px){
+
+    header{
+        display: flex;
+        flex-wrap: wrap;
+        
+    }
+
+    .logo{
+        width: 30%
+    }
+
+
+#searchs{
+    
+    width: 30%;
+
+}
+
+
+
 }

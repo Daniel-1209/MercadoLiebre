@@ -3,7 +3,6 @@ let express = require('express');
 
 let app = express();
 
-let port = 3030;
 
 let path = require('path');
 
@@ -11,7 +10,7 @@ let path = require('path');
 // imagenes y por ello tenemos que ponerle en html la ruta /static al inicio de imagen
 app.use(express.static(path.resolve(__dirname, './public')));
 
-app.listen(port, () => {
+app.listen( process.env.PORT || 3030, () => {
     console.log( 'Server Runing');  
 });
 
